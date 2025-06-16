@@ -6,6 +6,8 @@ Proyek ini menggunakan arsitektur microservice dengan NestJS dalam struktur mono
 * User Service (port 3001)
 * Payment Service (port 3002)
 
+ _note: terdapat logic code yang tertera pada masing masing file .ts_
+
 Setiap layanan berjalan secara independen dan saling berkomunikasi menggunakan protokol TCP.
 
 ---
@@ -43,7 +45,7 @@ nest-cli.json
 Setiap layanan memiliki:
 
 * `main.ts` untuk inisialisasi dan menjalankan layanan menggunakan TCP
-* `*.module.ts` untuk mendaftarkan controller, service, dan client (jika perlu)
+* `*.module.ts` untuk mendaftarkan controller, service, dan client 
 * `*.controller.ts` untuk menerima message pattern
 * `*.service.ts` untuk menjalankan logika bisnis
 
