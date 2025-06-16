@@ -1,20 +1,18 @@
 import { Injectable } from "@nestjs/common";
 
 @Injectable()
+@Injectable()
 export class BookingService {
-  private bookings: any[] = [];
+  constructor(
+    @Inject("USER_SERVICE") private readonly userClient: ClientProxy,
+    @Inject("PAYMENT_SERVICE") private readonly paymentClient: ClientProxy
+  ) {}
 
-  createBooking(data: any) {
-    const booking = {
-      id: Date.now().toString(),
-      ...data,
-    };
-    this.bookings.push(booking);
-    return { message: "Booking created!", booking };
+  async checkUser(userId: string) {
+    return this.userClient.send({ cmd: "get-user" }, userId).toPromise();
   }
 
-  getBooking(id: string) {
-    const booking = this.bookings.find((b) => b.id === id);
-    return booking || { message: "Booking not found" };
+  async createPayment(data: any) {
+    return this.paymentClient.send({ cmd: "create-payment" }, data).toPromise();
   }
 }
