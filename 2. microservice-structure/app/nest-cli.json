@@ -1,0 +1,24 @@
+{
+    "monorepo": true,
+    "root": "apps",
+    "projects": {
+        "booking": {
+            "type": "application",
+            "root": "apps/booking",
+            "entryFile": "main",
+            "sourceRoot": "apps/booking/src"
+        },
+        "user": {
+            "type": "application",
+            "root": "apps/user",
+            "entryFile": "main",
+            "sourceRoot": "apps/user/src"
+        },
+        "payment": {
+            "type": "application",
+            "root": "apps/payment",
+            "entryFile": "main",
+            "sourceRoot": "apps/payment/src"
+        }
+    }
+}
