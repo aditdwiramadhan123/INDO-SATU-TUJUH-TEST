@@ -1,4 +1,4 @@
-Untuk meningkatkan performa dan pengalaman pengguna, pendekatan optimasi yang diterapkan mencakup hal-hal berikut:
+Optimasi frontend dapat dilakukan dengan pendekatan yang diterapkan mencakup hal-hal berikut:
 
 ---
 
